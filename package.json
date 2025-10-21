@@ -1,0 +1,24 @@
+{
+  "name": "api-otaku",
+  "version": "1.0.0",
+  "description": "Collection d'APIs minimaliste avec thème otaku",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Build complete'",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod"
+  },
+  "keywords": [
+    "api",
+    "serverless",
+    "otaku",
+    "vercel",
+    "netlify"
+  ],
+  "author": "Otaku Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}

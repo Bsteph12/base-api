@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="STEPH TECH API's - Collection d'APIs modernes et performantes">
+    <title>STEPH TECH API's</title>
+    <link rel="icon" type="image/svg+xml" href="https://i.postimg.cc/1XHQjSfj/t-l-chargement.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.postimg.cc/1XHQjSfj/t-l-chargement.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.postimg.cc/1XHQjSfj/t-l-chargement.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/1XHQjSfj/t-l-chargement.jpg">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i data-lucide="zap" class="brand-icon"></i>
+                <span class="brand-text">STEPH TECH</span>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i data-lucide="moon" class="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Header -->
+        <header class="hero">
+            <h1 class="hero-title">STEPH TECH API's</h1>
+            <p class="hero-subtitle">Modern API Collection for Developers</p>
+            <p class="hero-powered">Powered by <span class="highlight">STEPHDEV</span></p>
+        </header>
+
+        <!-- API Cards -->
+        <div class="api-grid">
+            <!-- API 1: Hello World -->
+            <div class="api-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="send"></i>
+                    </div>
+                    <h3 class="card-title">Hello World</h3>
+                </div>
+                <p class="card-description">Simple API qui retourne un message de bienvenue avec timestamp</p>
+                
+                <div class="endpoint-container">
+                    <code class="endpoint" id="endpoint-hello">https://steph-api.vercel.app/api/hello</code>
+                    <button class="btn-copy" onclick="copyEndpoint('hello')" aria-label="Copy endpoint">
+                        <i data-lucide="copy" class="copy-icon"></i>
+                    </button>
+                </div>
+
+                <button class="btn-primary" onclick="testAPI('/api/hello', 'hello')">
+                    <i data-lucide="play" style="width: 16px; height: 16px;"></i>
+                    Test API
+                </button>
+
+                <!-- Result Container for this card -->
+                <div class="result-container" id="result-hello"></div>
+            </div>
+
+            <!-- API 2: Anime Quote -->
+            <div class="api-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="message-circle"></i>
+                    </div>
+                    <h3 class="card-title">Anime Quote</h3>
+                </div>
+                <p class="card-description">Obtenir une citation aléatoire d'anime inspirante avec personnage et série</p>
+                
+                <div class="endpoint-container">
+                    <code class="endpoint" id="endpoint-anime-quote">https://steph-api.vercel.app/api/anime-quote</code>
+                    <button class="btn-copy" onclick="copyEndpoint('anime-quote')" aria-label="Copy endpoint">
+                        <i data-lucide="copy" class="copy-icon"></i>
+                    </button>
+                </div>
+
+                <button class="btn-primary" onclick="testAPI('/api/anime-quote', 'anime-quote')">
+                    <i data-lucide="play" style="width: 16px; height: 16px;"></i>
+                    Test API
+                </button>
+
+                <!-- Result Container for this card -->
+                <div class="result-container" id="result-anime-quote"></div>
+            </div>
+
+            <!-- API 3: Random Number -->
+            <div class="api-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="dice-5"></i>
+                    </div>
+                    <h3 class="card-title">Random Number</h3>
+                </div>
+                <p class="card-description">Génère un nombre aléatoire. Supports query params: ?min=X&max=Y</p>
+                
+                <div class="endpoint-container">
+                    <code class="endpoint" id="endpoint-random-number">https://steph-api.vercel.app/api/random-number</code>
+                    <button class="btn-copy" onclick="copyEndpoint('random-number')" aria-label="Copy endpoint">
+                        <i data-lucide="copy" class="copy-icon"></i>
+                    </button>
+                </div>
+
+                <button class="btn-primary" onclick="testAPI('/api/random-number', 'random-number')">
+                    <i data-lucide="play" style="width: 16px; height: 16px;"></i>
+                    Test API
+                </button>
+
+                <!-- Result Container for this card -->
+                <div class="result-container" id="result-random-number"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 STEPH TECH API's • Built by STEPHDEV</p>
+                <div class="footer-links">
+                    <a href="https://github.com" target="_blank" rel="noopener">
+                        <i data-lucide="github" style="width: 14px; height: 14px;"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
